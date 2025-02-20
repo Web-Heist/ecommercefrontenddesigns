@@ -1,0 +1,67 @@
+/* Dashboard.css */
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-settings {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }

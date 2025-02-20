@@ -1,0 +1,41 @@
+import React, { useContext } from "react";
+import { WishlistContext } from "./components/context/WishlistContext";
+
+const Wishlist = () => {
+  const { wishlist, removeFromWishlist } = useContext(WishlistContext);
+
+  return (
+    <div className="wishlist-container">
+      <h2>Wishlist</h2>
+      {wishlist.length === 0 ? (
+        <p>Your wishlist is empty.</p>
+      ) : (
+        wishlist.map((product) => (
+          <div key={product.id} className="wishlist-item">
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p>${product.price}</p>
+            <button onClick={() => removeFromWishlist(product.id)}>
+              Remove
+            </button>
+          </div>
+        ))
+      )}
+    </div>
+  );
+};
+
+export default Wishlist;
+
+Wishlist.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      // other product properties...
+    })
+  )
+};
+
+Wishlist.defaultProps = {
+  products: []
+};
